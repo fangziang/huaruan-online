@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<scroll-view bindscroll='' scroll-y style='height:100%'>
+<scroll-view bindscroll='' scroll-y scroll-top="{{scrollTop}}" style='height:100%'>
   <view class='search'>
     <view bindtap='lookMessage' class='message-icon'>
       <image src='{{messageIconUrl}}'></image>
@@ -17,29 +17,57 @@
   <view class='swiper-wrapper'>
     <swiper class='index-swiper' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' 
     interval='{{interval}}' duration='{{duration}}'>
-    <block wx:for='{{imgUrls}}'  wx:key='id+index'>
+    <block wx:for='{{slides}}'  wx:key='index'>
       <swiper-item>
-        <image src='{{item}}' class='slide-image'></image>
+        <image src='{{item.imgUrl}}' class='slide-image' bindtap='slideDetails' data-name='{{item.name}}'></image>
       </swiper-item>
     </block>
-    </swiper>
+    </swiper>  
   </view>
 
   <view class='product-filter'>
-    <view class='left' bindtap="filter('left')">
+    <view class='left' bindtap="filter" data-method='new'>
       <text>最新</text>
     </view>
     <view class='divide-line'></view>
-    <view class='middle' bindtap="filter('middle')">
+    <view class='middle' bindtap="filter" data-method='popular'>
       <text>最热</text>
     </view>
     <view class='divide-line'></view>
-    <view class='right' bindtap="filter('right')">
+    <view class='right' bindtap="filter" data-method='filter'>
       <view>
       <text class='text-filter'>筛选</text>
-      <image class='filter-icon'></image>
+      <image class='filter-icon' src='{{filterIconUrl}}'></image>
       </view>
     </view>
+  </view>
+  <!--商品列表  -->
+  <view class='products-list' wx:for='{{productsList}}' wx:key='id'>
+    <view class='product-item'>
+    <!--商品标题和价格  -->
+      <view class='product-head'>
+        <text class='product-title'>{{productsList[index].title}}</text>
+        <text class='product-price'>{{productsList[index].price}}</text>
+      </view>
+      <!--商品图片列表  -->
+      <view class='product-pictures' wx:for='{{productsList[index].pictures}}' wx:key='picid'>
+          <image class='product-picture' src='{{item}}'></image>
+      </view>
+      <!--商品描述  -->
+      <view class='product-description'>
+        <text class='text-product-des'>{{productsList[index].description}}</text>
+      </view>
+      <!--用户信息  -->
+      <view class='user-info'>
+        <image class='user-avatar' src='{{productsList[index].userAvatarUrl}}'></image>
+        <view class='user-info-sub'>
+          <text class='user-nick'>{{productsList[index].userNickname}}</text>
+          <text class='user-verified'>{{productsList[index].userVerified}}</text>
+          <text class='user-address'>{{productsList[index].userAddress}}</text>
+        </view>
+      </view>
+    </view>
+
   </view>
 
 </scroll-view>

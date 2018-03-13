@@ -103,7 +103,10 @@ page {
   font-size: 12px;
   width: 36%;
   height: 50rpx;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
   text-align: center;
+  align-items: center;
   vertical-align: middle;
 }
 .divide-line {
@@ -113,9 +116,95 @@ page {
 }
 .product-filter .right .filter-icon {
   font-size: 12px;
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+  margin-right: 35rpx;
 }
 .product-filter .right .text-filter {
   font-size: 12px;
 }
+.products-list {
+  margin: 0 10px 10px 10px;
+  background: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow:0 5px 5px #C9C9C9;
+}
 
+.products-list .product-item {
+  padding: 5rpx;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.products-list .product-item .product-head {
+  height: 60rpx;
+  font-size: 14px;
+  background: yellowgreen;
+}
+.product-head .product-title {
+  font-size: 14px;
+  float: left;
+}
+.product-head  .product-price {
+  font-size: 14px;
+  float: right;
+}
+.product-item .product-pictures {
+  display: inline-block;
+  background: yellow;
+}
+.product-pictures image {
+  border: 1px;
+  margin: 5rpx;
+  height: 110px;
+  width: 110px;
+}
+.products-list .product-item .product-description {
+  overflow: visible;
+  height: 40px;
+  vertical-align: middle;
+  background: red;
 
+}
+
+.product-description .text-product-des {
+  font-size: 14px;
+  color: black;
+}
+.product-item .user-info {
+  padding: 5rpx;
+  position: relative;
+}
+.user-info .user-avatar{
+  width:70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.user-info .user-info-sub{
+  left: 100rpx;
+  position: relative;
+  top: -80rpx;
+}
+
+.user-info-sub .user-nick {
+  font-size: 14px;
+  color: gray;
+  margin-right: 10px;
+  float: left;
+}
+.user-info-sub .user-verified {
+  font-size: 12px;
+  color: blueviolet;
+  float: left;
+
+}
+.user-info-sub .user-address {
+  position: relative;
+  left: -80px;
+  top: 20px;
+
+}
