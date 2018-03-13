@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<scroll-view bindscroll='' scroll-y style='height:100%'>
+  <view class='search'>
+    <view bindtap='lookMessage' class='message-icon'>
+      <image src='{{messageIconUrl}}'></image>
+    </view>
+    <view class="search-wrapper{{show_serach_back?'search-wrapper-blue':''}}">
+      <view class='search-button' bindtap='click_search'>
+        <view class='iconfont icon-sousuo'>四六级英语</view>
+      </view>
+    </view>
+    <view bindtap='look_more' class='text-look-more'>
+      <text>更多</text>
+    </view>
+  </view>
+
+  <view class='swiper-wrapper'>
+    <swiper class='index-swiper' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' 
+    interval='{{interval}}' duration='{{duration}}'>
+    <block wx:for='{{imgUrls}}'  wx:key='id+index'>
+      <swiper-item>
+        <image src='{{item}}' class='slide-image'></image>
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+
+  <view class='product-filter'>
+    <view class='left' bindtap="filter('left')">
+      <text>最新</text>
+    </view>
+    <view class='divide-line'></view>
+    <view class='middle' bindtap="filter('middle')">
+      <text>最热</text>
+    </view>
+    <view class='divide-line'></view>
+    <view class='right' bindtap="filter('right')">
+      <view>
+      <text class='text-filter'>筛选</text>
+      <image class='filter-icon'></image>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>

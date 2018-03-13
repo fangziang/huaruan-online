@@ -1,0 +1,121 @@
+/**index.wxss**/
+
+page {
+  background: whitesmoke;
+}
+.index-swiper {
+  height: 400rpx;
+  width: 100%;
+  border-radius:8px;
+}
+.index-swiper image {
+  height: 100%;
+  width: 100%;
+  border-radius:8px;
+}
+.search {
+  background: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow:0 5px 5px #C9C9C9;
+}
+.search .message-icon {
+  padding: 20rpx 20rpx 0 18rpx;
+}
+.search .message-icon image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius:50%;
+  margin-right: 40rpx; 
+}
+/*搜索  */
+.search-wrapper {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  padding: 17rpx 0;
+  width: 75%;
+  z-index: 1;
+  background-color: white;
+}
+.search-button {
+  margin: 0 auto;
+  height: 25px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: top;
+}
+.search-wrapper-blue {
+  background-color: #1296db;
+}
+.search .text-look-more {
+  padding: 20rpx 20rpx 10rpx 10rpx;
+  float: right;
+}
+.search .text-look-more text {
+  width: 80rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  margin-left: 520rpx;
+  font-size: 12px;
+  color: grey;
+}
+
+.swiper-wrapper {
+  margin: 0 10px 10px 10px;
+  border-radius:8px;
+  box-shadow: 0 5px 5px #C9C9C9;
+}
+
+.product-filter {
+  margin: 0 10px 10px 10px;
+  background: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 80rpx;
+  border-radius: 10px;
+  box-shadow:0 5px 5px #C9C9C9;
+}
+.product-filter .left {
+  font-size: 12px;
+  float: left;
+  width: 32%;
+  text-align: center;
+  vertical-align: middle;
+  height: 50rpx;
+}
+.product-filter .middle {
+  font-size: 12px;
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  width: 32%;
+  height: 50rpx;
+}
+.product-filter .right {
+  font-size: 12px;
+  width: 36%;
+  height: 50rpx;
+  text-align: center;
+  vertical-align: middle;
+}
+.divide-line {
+  width: 2px;
+  height: 45px;
+  background: whitesmoke;
+}
+.product-filter .right .filter-icon {
+  font-size: 12px;
+}
+.product-filter .right .text-filter {
+  font-size: 12px;
+}
+
+
