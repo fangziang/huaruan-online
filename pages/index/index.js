@@ -22,6 +22,43 @@ Page({
         name:'claim'
       }
     ],
+    radios:[
+      {
+        id: "0",
+        value: "全部",
+        checked: true
+      },
+      {
+        id:"1",
+        value:"教材书籍",
+        checked:false
+      },
+      {
+        id: "2",
+        value: "日化服饰",
+        checked: false
+      },
+      {
+        id: "3",
+        value: "数码家电",
+        checked: false
+      },
+      {
+        id: "4",
+        value: "文化体育",
+        checked: false
+      },
+      {
+        id: "5",
+        value: "技能服务",
+        checked: false
+      },
+      {
+        id: "6",
+        value: "其他",
+        checked: false
+      }
+    ],
     indicatorDots:true,
     autoplay:true,
     interval:2000,
@@ -29,7 +66,10 @@ Page({
     messageIconUrl:'../../static/images/ic_jwc.png',
     moreIconUrl:'../../static/images/comments.png',
     filterIconUrl:'../../static/images/map5.png',
-    productsList:[]
+    productsList:[],
+    sidebarStyle:'', //侧边栏的滑动效果
+    btnSelected1:'background-color: green; box-shadow:0 2px 2px #C9C9C9;', //按钮选中的效果
+    btnSelected2:'background-color: whitesmoke;'
   },
   // 处理轮播图的点击链接
   slideDetails:function(e) {
@@ -81,6 +121,24 @@ Page({
     } else if(method == 'filter') {
       // 右边抽屉导航滑出，选择筛选的类型
       console.log("选择了筛选")
+      this.setData({
+        sidebarStyle: 'transform:translate(0)'
+      })
+    }
+  },
+  radioChange:function(e) {
+    console.log(e);
+  },
+  confirm:function(e) {
+    let t = e.currentTarget.dataset.type;
+    if(t == 'A') {
+      this.setData({
+        sidebarStyle: 'transform:translate(400rpx)'
+      })
+    } else {
+      this.setData({
+        sidebarStyle: 'transform:translate(400rpx)'
+      })
     }
   },
 

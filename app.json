@@ -1,10 +1,11 @@
 {
   "pages": [
+"pages/start/start",
+    "pages/publish/publish",
     "pages/index/index",
-    "pages/start/start",
     "pages/logs/logs",
     "pages/post/post",
-    "pages/my/my"
+  "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "#212121",
@@ -26,12 +27,12 @@
       },
       {
         "pagePath":"pages/post/post",
-        "text":"上传",
-        "iconPath":"static/images/tar-about.png",
-        "selectedIconPath":"static/images/tar-about-on.png"
+        "text":"发布",
+        "iconPath":"static/images/plus64_normal.png",
+        "selectedIconPath":"static/images/plus64.png"
       },
       {
-        "pagePath":"pages/message/message",
+        "pagePath":"pages/my/my",
         "text":"我的",
         "iconPath":"static/images/tar-topic.png",
         "selectedIconPath":"static/images/tar-topic-on.png"

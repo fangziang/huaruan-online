@@ -6,7 +6,7 @@
     </view>
     <view class="search-wrapper{{show_serach_back?'search-wrapper-blue':''}}">
       <view class='search-button' bindtap='click_search'>
-        <view class='iconfont icon-sousuo'>四六级英语</view>
+        <view>四六级英语</view>
       </view>
     </view>
     <view bindtap='look_more' class='text-look-more'>
@@ -27,16 +27,16 @@
 
   <view class='product-filter'>
     <view class='left' bindtap="filter" data-method='new'>
-      <text>最新</text>
+      <span>最新</span>
     </view>
     <view class='divide-line'></view>
     <view class='middle' bindtap="filter" data-method='popular'>
-      <text>最热</text>
+      <span>最热</span>
     </view>
     <view class='divide-line'></view>
     <view class='right' bindtap="filter" data-method='filter'>
       <view>
-      <text class='text-filter'>筛选</text>
+      <span class='text-filter'>筛选</span>
       <image class='filter-icon' src='{{filterIconUrl}}'></image>
       </view>
     </view>
@@ -67,7 +67,29 @@
         </view>
       </view>
     </view>
-
   </view>
 
+  <!--侧滑栏-分类筛选  -->
+  <view class='side-bar' style='{{sidebarStyle}}'>
+    <view class='side-bar-top'>
+      <view  class='side-bar-title'><span>类别</span></view>
+
+      <view class='side-bar-radios'>
+        <radio-group class='radio-group' bindchange='radioChange'>
+          <label class='radio' wx:for='{{radios}}' wx:key='id'>
+            <radio checked='{{item.checked}}'>{{item.value}}</radio>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class='side-bar-middle'>
+      <text>分类</text>
+    </view>
+    <view class='side-bar-bottom'>
+          <view class='side-bar-buttons'>
+            <view bindtap='confirm' data-type='A' class='btn' style='{{btnSelected1}}'>确认</view>
+            <view bindtap='confirm' data-type='C' class='btn' style='{{btnSelected2}}'>取消</view>
+          </view>
+    </view>
+  </view>
 </scroll-view>

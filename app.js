@@ -175,7 +175,7 @@ App({
   },
 
   globalData: {
-    userInfo: null
+    userInfo: null,
   },
 
   onPullDownReflesh:function() {
